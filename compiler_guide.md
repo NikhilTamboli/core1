@@ -7,9 +7,11 @@ Instructions : 32 bits * 250 = 1 KB
 
 # INSTRUCTION FORMAT
 
->### Load Immediate: 
-> opcode: 8 bits [31-24] => ***00000000***  
-> desitnation register: 4 bits [23-20]  
-> data: 16 bits signed [15:0]  
+>## Load Immediate: 
+> ### opcode: 
+>- 8 bits [31-24] => ***00000000***  
+> ### desitnation register: 
+>- 4 bits [23-20]  
+> ### data: 16 bits signed [15:0]  
 >- max: 32767
 >- min: -32767
