@@ -4,8 +4,8 @@ May 22 2024
 19:03:11
 C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
 C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sim_1/new/core_tb.v,1740045450,verilog,,,,core_tb,,,,,,,,
-C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/controller.v,1740044940,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/core.v,,controller,,,,,,,,
+C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/controller.v,1740068753,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/core.v,,controller,,,,,,,,
 C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/core.v,1740045093,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/ifid.v,,core,,,,,,,,
-C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/ifid.v,1740045270,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/instructions.v,,ifid,,,,,,,,
+C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/ifid.v,1740068710,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/instructions.v,,ifid,,,,,,,,
 C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/instructions.v,1740045215,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/registers.v,,instructions,,,,,,,,
 C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/registers.v,1740045395,verilog,,C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sim_1/new/core_tb.v,,registers,,,,,,,,

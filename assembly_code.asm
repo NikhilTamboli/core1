@@ -1,5 +1,5 @@
-ld r1 4
-ld r2 2
-ld r3 0
-ld r4 6
-ld r4 9
+ldi r1 4
+ldi r2 2
+ldi r3 0
+ldi r4 6
+ldi r5 9

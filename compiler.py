@@ -19,7 +19,7 @@ for i in range(250):
         inst = inst.split(" ")
         mac+=dict[inst[0]]
         match inst[0]:
-            case "ld":
+            case "ldi":
                 mac+=dict[inst[1]]
                 mac+=to_bin(int(inst[2]))
         mac+=("\n")

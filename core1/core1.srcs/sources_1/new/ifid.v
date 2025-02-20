@@ -11,7 +11,7 @@ module ifid(
 
 always@(posedge clk) begin
     case(ic[31:24])
-        6'b000000: begin
+        8'b00001111: begin
             writedst <= ic[23:20];
             immidata <= ic[15:0];
             readreg1 <= 0;

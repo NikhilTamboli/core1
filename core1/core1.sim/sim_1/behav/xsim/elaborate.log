@@ -8,14 +8,4 @@ Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 17 differs from formal bit length 16 for port 'immidata' [C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/core.v:17]
 WARNING: [VRFC 10-3091] actual bit length 17 differs from formal bit length 16 for port 'writedata' [C:/MyFiles/0 BITS/Personal Projects/core1/core1/core1.srcs/sources_1/new/core.v:21]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.instructions
-Compiling module xil_defaultlib.controller
-Compiling module xil_defaultlib.ifid
-Compiling module xil_defaultlib.registers
-Compiling module xil_defaultlib.core
-Compiling module xil_defaultlib.core_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot core_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

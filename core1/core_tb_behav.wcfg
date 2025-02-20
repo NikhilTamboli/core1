@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8.333 ns"></ZoomStartTime>
-      <ZoomEndTime time="58.334 ns"></ZoomEndTime>
-      <Cursor1Time time="27.825 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="80.001 ns"></ZoomEndTime>
+      <Cursor1Time time="45.873 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="132"></NameColumnWidth>
-      <ValueColumnWidth column_width="224"></ValueColumnWidth>
+      <ValueColumnWidth column_width="219"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
    <wvobject fp_name="/core_tb/clk" type="logic">
@@ -35,6 +35,7 @@
       <wvobject fp_name="/core_tb/uut/IF/ic" type="array">
          <obj_property name="ElementShortName">ic[31:0]</obj_property>
          <obj_property name="ObjectShortName">ic[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/IF/pc" type="array">
          <obj_property name="ElementShortName">pc[4:0]</obj_property>
@@ -106,16 +107,16 @@
          <obj_property name="ObjectShortName">writedst[3:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/regs/writedata" type="array">
-         <obj_property name="ElementShortName">writedata[16:0]</obj_property>
-         <obj_property name="ObjectShortName">writedata[16:0]</obj_property>
+         <obj_property name="ElementShortName">writedata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">writedata[15:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/regs/data1" type="array">
-         <obj_property name="ElementShortName">data1[16:0]</obj_property>
-         <obj_property name="ObjectShortName">data1[16:0]</obj_property>
+         <obj_property name="ElementShortName">data1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data1[15:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/regs/data2" type="array">
-         <obj_property name="ElementShortName">data2[16:0]</obj_property>
-         <obj_property name="ObjectShortName">data2[16:0]</obj_property>
+         <obj_property name="ElementShortName">data2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data2[15:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/regs/regs" type="array">
          <obj_property name="ElementShortName">regs[0:15][15:0]</obj_property>
