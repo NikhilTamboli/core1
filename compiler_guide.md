@@ -1,4 +1,4 @@
-Registers : 0 - 15
+Registers : 0 - 15  
 Instructions : 32 bits * 250 = 1 KB
 
 ---
@@ -12,6 +12,7 @@ Instructions : 32 bits * 250 = 1 KB
 >- 8 bits [31-24] => ***00000000***  
 > ### desitnation register: 
 >- 4 bits [23-20]  
-> ### data: 16 bits signed [15:0]  
+> ### data: 
+>- 16 bits signed [15:0]  
 >- max: 32767
 >- min: -32767
