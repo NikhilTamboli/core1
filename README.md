@@ -4,7 +4,10 @@
 - Instructions : 32 bits * 250 = 1 KB
 - All instructions must be in small caps
 - All labels must be in caps
-- Flag register: ***NA NA NA NA OVERFLOW SIGN CARRY ZERO***
+- Flag register :
+> |  7   |  6   |  5   |  4   |  3       |  2   |  1    |  0   |
+> | ---- | ---- | ---- | ---- | -------- | ---- | ----- | ---- |
+> |  NA  |  NA  |  NA  |  NA  | OVERFLOW | SIGN | CARRY | ZERO |
 
 ---
 
