@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="80.001 ns"></ZoomEndTime>
-      <Cursor1Time time="45.873 ns"></Cursor1Time>
+      <ZoomStartTime time="13.333 ns"></ZoomStartTime>
+      <ZoomEndTime time="93.334 ns"></ZoomEndTime>
+      <Cursor1Time time="80.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="132"></NameColumnWidth>
-      <ValueColumnWidth column_width="219"></ValueColumnWidth>
+      <ValueColumnWidth column_width="189"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/core_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -27,6 +27,23 @@
    <wvobject fp_name="/core_tb/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="group54" type="group">
+      <obj_property name="label">PC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/core_tb/uut/pcounter/jmpto" type="array">
+         <obj_property name="ElementShortName">jmpto[4:0]</obj_property>
+         <obj_property name="ObjectShortName">jmpto[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/pcounter/jmp" type="logic">
+         <obj_property name="ElementShortName">jmp</obj_property>
+         <obj_property name="ObjectShortName">jmp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/pcounter/pc" type="array">
+         <obj_property name="ElementShortName">pc[4:0]</obj_property>
+         <obj_property name="ObjectShortName">pc[4:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group70" type="group">
       <obj_property name="label">IF</obj_property>
@@ -40,24 +57,6 @@
       <wvobject fp_name="/core_tb/uut/IF/pc" type="array">
          <obj_property name="ElementShortName">pc[4:0]</obj_property>
          <obj_property name="ObjectShortName">pc[4:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group75" type="group">
-      <obj_property name="label">controller</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/core_tb/uut/ctrl/ic" type="array">
-         <obj_property name="ElementShortName">ic[31:0]</obj_property>
-         <obj_property name="ObjectShortName">ic[31:0]</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/ctrl/regwrite" type="logic">
-         <obj_property name="ElementShortName">regwrite</obj_property>
-         <obj_property name="ObjectShortName">regwrite</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/ctrl/writewhat" type="logic">
-         <obj_property name="ElementShortName">writewhat</obj_property>
-         <obj_property name="ObjectShortName">writewhat</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group82" type="group">
@@ -81,9 +80,40 @@
          <obj_property name="ObjectShortName">ic[31:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/core_tb/uut/ifid/immidata" type="array">
-         <obj_property name="ElementShortName">immidata[15:0]</obj_property>
-         <obj_property name="ObjectShortName">immidata[15:0]</obj_property>
+      <wvobject fp_name="/core_tb/uut/ifid/jmp" type="logic">
+         <obj_property name="ElementShortName">jmp</obj_property>
+         <obj_property name="ObjectShortName">jmp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/jmpto" type="array">
+         <obj_property name="ElementShortName">jmpto[4:0]</obj_property>
+         <obj_property name="ObjectShortName">jmpto[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/flag" type="array">
+         <obj_property name="ElementShortName">flag[7:0]</obj_property>
+         <obj_property name="ObjectShortName">flag[7:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/icid" type="array">
+         <obj_property name="ElementShortName">icid[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icid[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/icwb" type="array">
+         <obj_property name="ElementShortName">icwb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icwb[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/regwrite" type="logic">
+         <obj_property name="ElementShortName">regwrite</obj_property>
+         <obj_property name="ObjectShortName">regwrite</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/resultwb" type="array">
+         <obj_property name="ElementShortName">resultwb[15:0]</obj_property>
+         <obj_property name="ObjectShortName">resultwb[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/ifid/writedata" type="array">
+         <obj_property name="ElementShortName">writedata[15:0]</obj_property>
+         <obj_property name="ObjectShortName">writedata[15:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group94" type="group">
@@ -121,6 +151,127 @@
       <wvobject fp_name="/core_tb/uut/regs/regs" type="array">
          <obj_property name="ElementShortName">regs[0:15][15:0]</obj_property>
          <obj_property name="ObjectShortName">regs[0:15][15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group62" type="group">
+      <obj_property name="label">ID/EX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/core_tb/uut/idex/data1" type="array">
+         <obj_property name="ElementShortName">data1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data1[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/idex/data2" type="array">
+         <obj_property name="ElementShortName">data2[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data2[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/idex/a" type="array">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/idex/b" type="array">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/idex/icid" type="array">
+         <obj_property name="ElementShortName">icid[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icid[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/idex/icex" type="array">
+         <obj_property name="ElementShortName">icex[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icex[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/idex/alucontrol" type="array">
+         <obj_property name="ElementShortName">alucontrol[3:0]</obj_property>
+         <obj_property name="ObjectShortName">alucontrol[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group69" type="group">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/core_tb/uut/alu/a" type="array">
+         <obj_property name="ElementShortName">a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">a[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/alu/b" type="array">
+         <obj_property name="ElementShortName">b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">b[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/alu/alucontrol" type="array">
+         <obj_property name="ElementShortName">alucontrol[3:0]</obj_property>
+         <obj_property name="ObjectShortName">alucontrol[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/alu/result" type="array">
+         <obj_property name="ElementShortName">result[15:0]</obj_property>
+         <obj_property name="ObjectShortName">result[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/alu/flag" type="array">
+         <obj_property name="ElementShortName">flag[7:0]</obj_property>
+         <obj_property name="ObjectShortName">flag[7:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/alu/temp" type="array">
+         <obj_property name="ElementShortName">temp[15:0]</obj_property>
+         <obj_property name="ObjectShortName">temp[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group113" type="group">
+      <obj_property name="label">EX/WB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/core_tb/uut/exwb/icex" type="array">
+         <obj_property name="ElementShortName">icex[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icex[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/exwb/icwb" type="array">
+         <obj_property name="ElementShortName">icwb[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icwb[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/exwb/result" type="array">
+         <obj_property name="ElementShortName">result[15:0]</obj_property>
+         <obj_property name="ObjectShortName">result[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/exwb/resultwb" type="array">
+         <obj_property name="ElementShortName">resultwb[15:0]</obj_property>
+         <obj_property name="ObjectShortName">resultwb[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group326" type="group">
+      <obj_property name="label">FWD</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/core_tb/uut/fwd/data" type="array">
+         <obj_property name="ElementShortName">data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/r1r" type="array">
+         <obj_property name="ElementShortName">r1r[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r1r[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/r2r" type="array">
+         <obj_property name="ElementShortName">r2r[3:0]</obj_property>
+         <obj_property name="ObjectShortName">r2r[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/rw" type="array">
+         <obj_property name="ElementShortName">rw[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rw[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/fwdsignalr1" type="logic">
+         <obj_property name="ElementShortName">fwdsignalr1</obj_property>
+         <obj_property name="ObjectShortName">fwdsignalr1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/fwdsignalr2" type="logic">
+         <obj_property name="ElementShortName">fwdsignalr2</obj_property>
+         <obj_property name="ObjectShortName">fwdsignalr2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/dataout" type="array">
+         <obj_property name="ElementShortName">dataout[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dataout[15:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

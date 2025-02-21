@@ -22,6 +22,11 @@ for i in range(250):
             case "ldi":
                 mac+=dict[inst[1]]
                 mac+=to_bin(int(inst[2]))
+            case "add":
+                mac+=dict[inst[1]]
+                mac+=dict[inst[2]]
+                mac+=dict[inst[3]]
+                mac+="000000000000"
         mac+=("\n")
         com.write(mac)
     else:

@@ -4,25 +4,35 @@ module core(
     input reset
     );
     
-wire [31:0] ic;
-wire [3:0] writedst, readreg1, readreg2, alucontrol;
-wire [16:0] immidata, data1, data2, aluresult, writedata, alusrc, result;
-wire regwrite, writewhat, aluwhat;
+wire [31:0] ic,icid,icex,icwb;
+wire [3:0] writedst, readreg1, readreg2, alucontrol, r1r, r2r, rw;
+wire [15:0] immidata, data1, data2, writedata, alusrc, result, a, b, resultwb, data, dataout, alusrc1, alusrc2;
+wire regwrite, writewhat, aluwhat, jmp, fwdsignalr1, fwdsignalr2;
 wire [7:0] flag;
+wire [4:0] pc, jmpto;
 
-instructions IF(.clk(clk), .reset(reset), .ic(ic));
+pc pcounter(.clk(clk), .reset(reset), .pc(pc), .jmpto(jmpto), .jmp(jmp));
 
-controller ctrl(.ic(ic), .regwrite(regwrite), .writewhat(writewhat), .clk(clk), .alucontrol(alucontrol), .aluwhat(aluwhat));
+instructions IF(.clk(clk), .reset(reset), .ic(ic), .pc(pc));
 
 ifid ifid(.clk(clk), .readreg1(readreg1), 
-            .readreg2(readreg2), .writedst(writedst), .ic(ic), .immidata(immidata));
+            .readreg2(readreg2), .writedst(writedst), .ic(ic), .icid(icid), .writedata(writedata), 
+            .flag(flag), .jmp(jmp), .jmpto(jmpto), .icwb(icwb),
+            .regwrite(regwrite), .resultwb(resultwb) ); 
             
-registers regs(.reset(reset), .clk(clk), .regwrite(regwrite), 
+registers regs(.reset(reset), .regwrite(regwrite), 
                 .readreg1(readreg1), .readreg2(readreg2), .writedst(writedst), 
                 .writedata(writedata), .data1(data1), .data2(data2));
 
-alu alu(.a(data1), .b(alusrc), .alucontrol(alucontrol), .flag(flag), .result(result));
-                
-assign writedata = writewhat?immidata:aluresult;
-assign alusrc = aluwhat?data2:immidata;
+idex idex(.clk(clk), .data1(data1), .data2(data2), 
+            .a(a), .b(b), .icid(icid), .icex(icex), .alucontrol(alucontrol));
+
+alu alu(.a(alusrc1), .b(alusrc2), .alucontrol(alucontrol), .flag(flag), .result(result));
+
+exwb exwb(.clk(clk), .icex(icex), .icwb(icwb), .result(result), .resultwb(resultwb));
+
+fwd fwd(.data(writedata), .icex(icex), .rw(writedst), .dataout(dataout), .fwdsignalr1(fwdsignalr1), .fwdsignalr2(fwdsignalr2));         
+
+assign alusrc1 = fwdsignalr1?dataout:a;
+assign alusrc2 = fwdsignalr2?dataout:b;       
 endmodule

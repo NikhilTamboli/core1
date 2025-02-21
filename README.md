@@ -5,9 +5,9 @@
 - All instructions must be in small caps
 - All labels must be in caps
 - Flag register :
-> |  7   |  6   |  5   |  4   |  3       |  2   |  1    |  0   |
-> | ---- | ---- | ---- | ---- | -------- | ---- | ----- | ---- |
-> |  NA  |  NA  |  NA  |  NA  | OVERFLOW | SIGN | CARRY | ZERO |
+ |  7   |  6   |  5   |  4   |  3       |  2   |  1    |  0   |
+ | ---- | ---- | ---- | ---- | -------- | ---- | ----- | ---- |
+ |  NA  |  NA  |  NA  |  NA  | OVERFLOW | SIGN | CARRY | ZERO |
 
 ---
 
@@ -15,7 +15,7 @@
 
 # INSTRUCTION FORMAT
 
-## Load Immediate 
+## ***ldi*** - Load Immediate 
 > ### opcode: 
 >- 8 bits [31-24] => ***00001111***  
 > ### desitnation register: 
@@ -24,4 +24,12 @@
 >- 16 bits signed [15:0]  
 >- max: 32767
 >- min: -32767
-  
+
+## ***add*** ADD
+> ### opcode: 
+>- 8 bits [31:24] => ***11110000***  
+> ### desitnation register: 
+>- 4 bits [23:20]  
+> ### source registers:
+>- 4 bits [19:16]
+>- 4 bits [15:12]

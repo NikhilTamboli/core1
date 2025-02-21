@@ -8,7 +8,7 @@ core uut (.clk(clk), .reset(reset));
 
 initial begin
     clk=1;
-    repeat(16) #5 clk=~clk;
+    repeat(20) #5 clk=~clk;
     $finish;
 end
 

@@ -2,7 +2,6 @@
 
 module registers(
     input reset,
-    input clk,
     input regwrite,
     input [3:0] readreg1,
     input [3:0] readreg2,
