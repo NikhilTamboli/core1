@@ -5,9 +5,9 @@
 - All instructions must be in small caps
 - All labels must be in caps
 - Flag register :
- |  7   |  6   |  5   |  4   |  3       |  2   |  1    |  0   |
- | ---- | ---- | ---- | ---- | -------- | ---- | ----- | ---- |
- |  NA  |  NA  |  NA  |  NA  | OVERFLOW | SIGN | CARRY | ZERO |
+|  7   |  6   |  5   |  4   |  3       |  2   |  1    |  0   |
+| ---- | ---- | ---- | ---- | -------- | ---- | ----- | ---- |
+|  NA  |  NA  |  NA  |  NA  | OVERFLOW | SIGN | CARRY | ZERO |
 
 ---
 
