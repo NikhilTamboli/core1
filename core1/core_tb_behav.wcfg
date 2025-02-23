@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="13.333 ns"></ZoomStartTime>
-      <ZoomEndTime time="93.334 ns"></ZoomEndTime>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="210.000 ns"></ZoomEndTime>
       <Cursor1Time time="80.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="132"></NameColumnWidth>
-      <ValueColumnWidth column_width="189"></ValueColumnWidth>
+      <ValueColumnWidth column_width="184"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="10" />
    <wvobject fp_name="/core_tb/clk" type="logic">
@@ -184,8 +184,8 @@
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/idex/alucontrol" type="array">
-         <obj_property name="ElementShortName">alucontrol[3:0]</obj_property>
-         <obj_property name="ObjectShortName">alucontrol[3:0]</obj_property>
+         <obj_property name="ElementShortName">alucontrol[7:0]</obj_property>
+         <obj_property name="ObjectShortName">alucontrol[7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group69" type="group">
@@ -201,8 +201,9 @@
          <obj_property name="ObjectShortName">b[15:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/alu/alucontrol" type="array">
-         <obj_property name="ElementShortName">alucontrol[3:0]</obj_property>
-         <obj_property name="ObjectShortName">alucontrol[3:0]</obj_property>
+         <obj_property name="ElementShortName">alucontrol[7:0]</obj_property>
+         <obj_property name="ObjectShortName">alucontrol[7:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/alu/result" type="array">
          <obj_property name="ElementShortName">result[15:0]</obj_property>
@@ -248,14 +249,6 @@
       <wvobject fp_name="/core_tb/uut/fwd/data" type="array">
          <obj_property name="ElementShortName">data[15:0]</obj_property>
          <obj_property name="ObjectShortName">data[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/fwd/r1r" type="array">
-         <obj_property name="ElementShortName">r1r[3:0]</obj_property>
-         <obj_property name="ObjectShortName">r1r[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/fwd/r2r" type="array">
-         <obj_property name="ElementShortName">r2r[3:0]</obj_property>
-         <obj_property name="ObjectShortName">r2r[3:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/core_tb/uut/fwd/rw" type="array">
          <obj_property name="ElementShortName">rw[3:0]</obj_property>

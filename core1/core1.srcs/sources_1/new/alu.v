@@ -3,7 +3,7 @@
 module alu(
     input [15:0] a,
     input [15:0] b,
-    input [3:0] alucontrol,
+    input [7:0] alucontrol,
     output reg [15:0] result,
     output reg [7:0] flag
     );
@@ -16,20 +16,23 @@ end
 
 always @(*) begin
     case(alucontrol) 
-        0: begin
+        8'b11110000: begin
             {temp,result}<=a+b;
         end
-        1: begin
+        8'b11110001: begin
             {temp,result}<=a-b;
         end
-        2: begin
+        8'b11110010: begin
             {temp,result}<=a*b;
         end
-        3: begin
+        8'b11110011: begin
             {temp,result}<=a>>b;
         end
-        4: begin
+        8'b11110100: begin
             {temp,result}<=a<<b;
+        end
+        8'b00000000: begin
+            {temp,result}<=a;
         end
         default: begin 
             result<=0;
@@ -40,7 +43,10 @@ always @(*) begin
     flag[0] <= result==0;
     flag[1] <= temp[0];
     flag[2] <= result[15];
-    flag[3] <= |temp;
-    flag[7:4] <= 4'b0;
+    flag[3] <= temp|15'b0;
+    flag[4] <= a<b;
+    flag[5] <= a==b;
+    flag[6] <= a>b;
+    flag[7] <= 0;
 end
 endmodule

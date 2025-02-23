@@ -8,7 +8,7 @@ module idex(
     output reg [15:0] b, 
     input [31:0] icid,
     output reg [31:0] icex,
-    output reg [3:0] alucontrol
+    output reg [7:0] alucontrol
     );
 
 always@(posedge clk) begin    
@@ -16,6 +16,6 @@ always@(posedge clk) begin
     if((icid[27:24]==4'b0011||icid[27:24]==4'b0100)) b<=icid[15:0];
     else b <= data2;
     a <= data1;
-    alucontrol <= icid[27:24]; 
+    alucontrol <= icid[31:24]; 
 end 
 endmodule

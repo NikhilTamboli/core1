@@ -16,26 +16,17 @@ module ifid(
     input [15:0] resultwb
     );
 
-//initial begin
-//    writedata = 0;
-//end    
-
 always@(negedge clk) begin
     case(icwb[31:24])
         8'b00001111: begin
             writedst <= icwb[23:20];
             writedata <= icwb[15:0];
             regwrite <= 1;
-        end
-        8'b11110000: begin
+        end        
+        default: begin
             writedst <= icwb[23:20];
             writedata <= resultwb;      
-            regwrite <=1;     
-        end
-        default: begin
-            writedst <= 0;
-            writedata <= 0;
-            regwrite <=0;
+            regwrite <=1;  
         end
     endcase  
 end
@@ -43,15 +34,11 @@ end
 always@(posedge clk) begin
     icid<=ic;
     regwrite<=0;
-    case(ic[31:24])
-        8'b11110000: begin
-            readreg1 <= ic[19:16];
-            readreg2 <= ic[15:12]; 
-        end
+    case(ic[31:24])                 
         default: begin
-            readreg1 <= 0;
-            readreg2 <= 0; 
-        end
+            readreg1 <= ic[19:16];
+            readreg2 <= ic[15:12];
+        end        
     endcase  
 end
 

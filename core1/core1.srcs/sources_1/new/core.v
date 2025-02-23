@@ -5,10 +5,10 @@ module core(
     );
     
 wire [31:0] ic,icid,icex,icwb;
-wire [3:0] writedst, readreg1, readreg2, alucontrol, r1r, r2r, rw;
+wire [3:0] writedst, readreg1, readreg2, rw;
 wire [15:0] immidata, data1, data2, writedata, alusrc, result, a, b, resultwb, data, dataout, alusrc1, alusrc2;
 wire regwrite, writewhat, aluwhat, jmp, fwdsignalr1, fwdsignalr2;
-wire [7:0] flag;
+wire [7:0] flag, alucontrol;
 wire [4:0] pc, jmpto;
 
 pc pcounter(.clk(clk), .reset(reset), .pc(pc), .jmpto(jmpto), .jmp(jmp));
