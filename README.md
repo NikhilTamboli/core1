@@ -18,7 +18,7 @@
 # INSTRUCTION FORMAT
 
 ## ***ldi*** - Load Immediate 
-> Ex: ldi r0 8 => r0 = 8
+> **Ex: ldi r0 8 => r0 = 8**
 > ### opcode: 
 >- 8 bits [31-24] => ***00001111***  
 > ### desitnation register: 
@@ -29,7 +29,7 @@
 >- min: -32767
 
 ## ***add*** - Add two registers and store in destination register
-> Ex: add r0 r1 r2 => r0 = r1 + r2
+> **Ex: add r0 r1 r2 => r0 = r1 + r2**
 > ### opcode: 
 >- 8 bits [31:24] => ***11110000***  
 > ### desitnation register: 
@@ -39,7 +39,7 @@
 >- 4 bits [15:12]
 
 ## ***sub*** - Subtract two registers and store in destination register
-> Ex: sub r0 r1 r2 => r0 = r1 - r2
+> **Ex: sub r0 r1 r2 => r0 = r1 - r2**
 > ### opcode: 
 >- 8 bits [31:24] => ***11110001***  
 > ### desitnation register: 
@@ -49,7 +49,7 @@
 >- 4 bits [15:12]
 
 ## ***mul*** - Multiply two registers and store in desitnation register
-> Ex: mul r0 r1 r2 => r0 = r1*r2
+> **Ex: mul r0 r1 r2 => r0 = r1*r2**
 > ### opcode: 
 >- 8 bits [31:24] => ***11110010***  
 > ### desitnation register: 
@@ -58,8 +58,8 @@
 >- 4 bits [19:16]
 >- 4 bits [15:12]
 
-## ***shr*** - Shift the register to right value by given amount and store in desitnation register
-> Ex: shr r0 r1 2 => r0 = r1>>2
+## ***shr*** - Shift the register value to right by given amount and store in desitnation register
+> **Ex: shr r0 r1 2 => r0 = r1>>2**
 > ### opcode: 
 >- 8 bits [31:24] => ***11110011***  
 > ### desitnation register: 
@@ -69,8 +69,8 @@
 > ### immidiate data:
 >- 16 bits [15:0]
 
-## ***shl*** - Shift the register to left value by given amount and store in desitnation register
-> Ex: shl r0 r1 2 => r0 = r1<<2
+## ***shl*** - Shift the register value to left by given amount and store in desitnation register
+> **Ex: shl r0 r1 2 => r0 = r1<<2**
 > ### opcode: 
 >- 8 bits [31:24] => ***11110100***  
 > ### desitnation register: 
