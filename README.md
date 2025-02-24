@@ -83,3 +83,36 @@
 >- 4 bits [19:16]
 > ### immidiate data:
 >- 16 bits [15:0]
+
+## ***addi*** - Add the immidiate value to source register value and store in destination register
+>  **Ex: addi r0 r1 2 ---> r0 = r1+2**
+> ### opcode: 
+>- 8 bits [31:24] ---> ***11110101***  
+> ### desitnation register: 
+>- 4 bits [23:20]  
+> ### source register:
+>- 4 bits [19:16]
+> ### immidiate data:
+>- 16 bits [15:0]
+
+## ***subi*** - Subtract the immidiate value to source register value and store in destination register
+>  **Ex: subi r0 r1 2 ---> r0 = r1-2**
+> ### opcode: 
+>- 8 bits [31:24] ---> ***11110110***  
+> ### desitnation register: 
+>- 4 bits [23:20]  
+> ### source register:
+>- 4 bits [19:16]
+> ### immidiate data:
+>- 16 bits [15:0]
+
+## ***muli*** - Multiply the immidiate value to source register value and store in destination register
+>  **Ex: muli r0 r1 2 ---> r0 = r1*2**
+> ### opcode: 
+>- 8 bits [31:24] ---> ***11110111***  
+> ### desitnation register: 
+>- 4 bits [23:20]  
+> ### source register:
+>- 4 bits [19:16]
+> ### immidiate data:
+>- 16 bits [15:0]
