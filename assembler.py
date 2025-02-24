@@ -46,6 +46,18 @@ for i in range(250):
                 mac+=dict[inst[1]]
                 mac+=dict[inst[2]]
                 mac+=to_bin(int(inst[3],16))
+            case "addi":
+                mac+=dict[inst[1]]
+                mac+=dict[inst[2]]
+                mac+=to_bin(int(inst[3],16))
+            case "subi":
+                mac+=dict[inst[1]]
+                mac+=dict[inst[2]]
+                mac+=to_bin(int(inst[3],16))
+            case "muli":
+                mac+=dict[inst[1]]
+                mac+=dict[inst[2]]
+                mac+=to_bin(int(inst[3],16))                                                
             case "mov":
                 mac+=dict[inst[1]]
                 mac+=dict[inst[2]]

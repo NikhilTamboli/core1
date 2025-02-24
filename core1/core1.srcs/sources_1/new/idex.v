@@ -13,7 +13,7 @@ module idex(
 
 always@(posedge clk) begin    
     icex<=icid;
-    if((icid[27:24]==4'b0011||icid[27:24]==4'b0100)) b<=icid[15:0];
+    if(icid[27:24]==4'b0011||icid[27:24]==4'b0100||icid[27:24]==4'b0101||icid[27:24]==4'b0110||icid[27:24]==4'b0111) b<=icid[15:0];
     else b <= data2;
     a <= data1;
     alucontrol <= icid[31:24]; 

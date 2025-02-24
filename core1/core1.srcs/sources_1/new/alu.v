@@ -31,6 +31,15 @@ always @(*) begin
         8'b11110100: begin
             {temp,result}<=a<<b;
         end
+        8'b11110101: begin
+            {temp,result}<=a+b;
+        end
+        8'b11110110: begin
+            {temp,result}<=a-b;
+        end
+        8'b11110111: begin
+            {temp,result}<=a*b;
+        end                        
         8'b00000000: begin
             {temp,result}<=a;
         end

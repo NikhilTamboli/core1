@@ -12,6 +12,11 @@ module fwd(
 always@(*) begin
     dataout<=data;
     fwdsignalr1<=(icex[19:16]==rw);
-    fwdsignalr2<=(icex[15:12]==rw);
+    if(icex[27:24]==4'b0011||icex[27:24]==4'b0100||icex[27:24]==4'b0101||icex[27:24]==4'b0110||icex[27:24]==4'b0111) begin //not immidiate inst 
+        fwdsignalr2<=0;
+    end
+    else begin
+        fwdsignalr2<=(icex[15:12]==rw);
+    end
 end    
 endmodule

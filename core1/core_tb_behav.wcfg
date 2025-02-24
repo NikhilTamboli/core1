@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="210.000 ns"></ZoomEndTime>
-      <Cursor1Time time="80.000 ns"></Cursor1Time>
+      <ZoomStartTime time="70.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="490.001 ns"></ZoomEndTime>
+      <Cursor1Time time="420.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="132"></NameColumnWidth>
-      <ValueColumnWidth column_width="184"></ValueColumnWidth>
+      <ValueColumnWidth column_width="179"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="10" />
    <wvobject fp_name="/core_tb/clk" type="logic">
@@ -188,6 +188,36 @@
          <obj_property name="ObjectShortName">alucontrol[7:0]</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject fp_name="group326" type="group">
+      <obj_property name="label">FWD</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/core_tb/uut/fwd/data" type="array">
+         <obj_property name="ElementShortName">data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/rw" type="array">
+         <obj_property name="ElementShortName">rw[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rw[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/fwdsignalr1" type="logic">
+         <obj_property name="ElementShortName">fwdsignalr1</obj_property>
+         <obj_property name="ObjectShortName">fwdsignalr1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/fwdsignalr2" type="logic">
+         <obj_property name="ElementShortName">fwdsignalr2</obj_property>
+         <obj_property name="ObjectShortName">fwdsignalr2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/icex" type="array">
+         <obj_property name="ElementShortName">icex[31:0]</obj_property>
+         <obj_property name="ObjectShortName">icex[31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/core_tb/uut/fwd/dataout" type="array">
+         <obj_property name="ElementShortName">dataout[15:0]</obj_property>
+         <obj_property name="ObjectShortName">dataout[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
    <wvobject fp_name="group69" type="group">
       <obj_property name="label">ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -222,7 +252,6 @@
    <wvobject fp_name="group113" type="group">
       <obj_property name="label">EX/WB</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/core_tb/uut/exwb/icex" type="array">
          <obj_property name="ElementShortName">icex[31:0]</obj_property>
          <obj_property name="ObjectShortName">icex[31:0]</obj_property>
@@ -240,31 +269,6 @@
       <wvobject fp_name="/core_tb/uut/exwb/resultwb" type="array">
          <obj_property name="ElementShortName">resultwb[15:0]</obj_property>
          <obj_property name="ObjectShortName">resultwb[15:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group326" type="group">
-      <obj_property name="label">FWD</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/core_tb/uut/fwd/data" type="array">
-         <obj_property name="ElementShortName">data[15:0]</obj_property>
-         <obj_property name="ObjectShortName">data[15:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/fwd/rw" type="array">
-         <obj_property name="ElementShortName">rw[3:0]</obj_property>
-         <obj_property name="ObjectShortName">rw[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/fwd/fwdsignalr1" type="logic">
-         <obj_property name="ElementShortName">fwdsignalr1</obj_property>
-         <obj_property name="ObjectShortName">fwdsignalr1</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/fwd/fwdsignalr2" type="logic">
-         <obj_property name="ElementShortName">fwdsignalr2</obj_property>
-         <obj_property name="ObjectShortName">fwdsignalr2</obj_property>
-      </wvobject>
-      <wvobject fp_name="/core_tb/uut/fwd/dataout" type="array">
-         <obj_property name="ElementShortName">dataout[15:0]</obj_property>
-         <obj_property name="ObjectShortName">dataout[15:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

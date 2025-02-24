@@ -10,7 +10,7 @@ ldi r9 ff
 ldi r10 ff
 mul r12 r9 r10
 add r13 r9 r10
-mov r2 r1
-mov r1 r0
-mov r0 r2
-ldi r2 0
+addi r0 r0 1
+subi r0 r0 1
+mul r0 r0 r0
+ldm r0 100
